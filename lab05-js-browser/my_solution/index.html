@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <!-- JavaScript imports -->
+    <script defer src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script defer src="index.js"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <title>Film Library</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-primary justify-content-between">
+        <a class="navbar-brand" href="#">
+            <i class="bi bi-film"></i>
+            Film Library
+        </a>
+        <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+        </form>
+        <a class="navbar-brand" href="#">
+            <i class="bi bi-person-circle"></i>
+        </a>
+    </nav>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-4 nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <h3>Filters</h3>
+
+                <a class="nav-link active" id="v-pills-all-tab" data-toggle="pill" href="#v-pills-all" role="tab"
+                    aria-controls="v-pills-all" aria-selected="true">All</a>
+                <a class="nav-link" id="v-pills-favorite-tab" data-toggle="pill" href="#v-pills-favorite" role="tab"
+                    aria-controls="v-pills-favorite" aria-selected="false">Favorite</a>
+                <a class="nav-link" id="v-pills-best_rated-tab" data-toggle="pill" href="#v-pills-best_rated" role="tab"
+                    aria-controls="v-pills-best_rated" aria-selected="false">Best rated</a>
+                <a class="nav-link" id="v-pills-seen_last_month-tab" data-toggle="pill" href="#v-pills-seen_last_month"
+                    role="tab" aria-controls="v-pills-seen_last_month" aria-selected="false">Seen last month</a>
+                <a class="nav-link" id="v-pills-unseen-tab" data-toggle="pill" href="#v-pills-unseen" role="tab"
+                    aria-controls="v-pills-unseen" aria-selected="false">Unseen</a>
+            </div>
+
+            <div class="col-8">
+                <h2 id="table-title">All Movies</h2>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Favorite</th>
+                            <th scope="col">Watch Date</th>
+                            <th scope="col">Rating</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <button type="button" class="btn btn-primary rounded-circle btn-lg"
+            style="position: fixed; bottom: 10px; right: 10px;">+</button>
+    </div>
+</body>
+
+</html>
