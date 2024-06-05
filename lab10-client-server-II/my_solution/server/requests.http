@@ -1,0 +1,50 @@
+GET http://localhost:3000/films
+// Retrieve the list of all the available films.
+###
+GET http://localhost:3000/favoriteFilms
+// Retrieve a list of all the favorite films.
+###
+GET http://localhost:3000/bestFilms
+// Retrieve a list of all the best films (i.e., those rated 5 out of 5).
+###
+GET http://localhost:3000/lastMonthFilms
+// Retrieve a list of all the films seen in the last month.
+###
+GET http://localhost:3000/unseenFilms
+// Retrieve a list of all the unseen films (i.e., the films without a specified “watchDate”).
+###
+GET http://localhost:3000/film/1
+// Retrieve a specific film, i.e., given its “id”.
+###
+POST http://localhost:3000/film
+// Create a new film, by providing all its information – except the “id” that will be automatically assigned by the back-end.
+content-type: application/json
+
+{
+    "title": "Pierrot le fou",
+    "isFavorite": true,
+    "rating": 4,
+    "watchDate": "2024-04-01",
+    "userId": 3
+}
+###
+PUT http://localhost:3000/film/10
+// Update an existing film, by providing its information, i.e., all the properties except the “id”.
+content-type: application/json
+
+{
+    "title": "Pierrot le fou",
+    "isFavorite": true,
+    "rating": 3,
+    "watchDate": "2024-04-01",
+    "userId": 3
+}
+###
+PUT http://localhost:3000/film/6/rating/3
+// Update the rating of a specific film.
+###
+PUT http://localhost:3000/film/6/isFavorite/false
+// Mark an existing film as favorite/unfavorite
+###
+DELETE http://localhost:3000/film/8
+// Delete an existing film.
